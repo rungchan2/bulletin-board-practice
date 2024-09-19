@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
@@ -8,14 +9,14 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDehUuFtjQdtcB7w_ws4RmH6EkJzzzg-K8",
-  authDomain: "community-fe112.firebaseapp.com",
-  databaseURL: "https://community-fe112-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "community-fe112",
-  storageBucket: "community-fe112.appspot.com",
-  messagingSenderId: "460014666734",
-  appId: "1:460014666734:web:75c9c6fe7d4816a54644ff",
-  measurementId: "G-CSKRZ1Z9EL"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  databaseURL: process.env.REACT_APP_FIREBASE_DATABASE_URL,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
 };
 
 // Initialize Firebase
